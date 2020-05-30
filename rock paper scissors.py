@@ -6,6 +6,8 @@ loop = True
 userScore = 0
 computerScore = 0
 
+print("\n")
+
 while(loop == True):
     #checks to see if user or computer has won (3 points)
     if userScore == 3 or computerScore == 3:
@@ -13,11 +15,12 @@ while(loop == True):
             print("Game over, you have beat the computer")
         else:
             print("Game over, computer won")
-        #checks to see if user wants to play again
+
         playAgain = input("\nplay again (y or n): ")
         if(playAgain == "y"):
             userScore = 0
             computerScore = 0
+            print("\n")
         else:
             break
 
