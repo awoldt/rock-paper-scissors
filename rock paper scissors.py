@@ -14,7 +14,13 @@ while(loop == True):
         else:
             print("Game over, computer won")
 
-        break
+        playAgain = input("\nplay again (y or n): ")
+        if(playAgain == "y"):
+            userScore = 0
+            computerScore = 0
+        else:
+            break
+
 
     computerChoiceIndex = random.randrange(0,len(choices))
     computerChoice = choices[computerChoiceIndex]
