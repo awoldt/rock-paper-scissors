@@ -13,7 +13,7 @@ while(loop == True):
             print("Game over, you have beat the computer")
         else:
             print("Game over, computer won")
-
+        #checks to see if user wants to play again
         playAgain = input("\nplay again (y or n): ")
         if(playAgain == "y"):
             userScore = 0
