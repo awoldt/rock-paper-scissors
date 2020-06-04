@@ -16,14 +16,18 @@ while(loop == True):
         else:
             print("Game over, computer won")
 
-        playAgain = input("\nplay again (y or n): ")
-        if(playAgain == "y"):
-            userScore = 0
-            computerScore = 0
-            print("\n")
-        else:
-            break
-
+        playAaginLoop = True
+        while(playAaginLoop == True):
+            playAgain = input("\nplay again (y or n): ")
+            if(playAgain == "y"):
+                userScore = 0
+                computerScore = 0
+                print("\n")
+                playAaginLoop = False
+            elif(playAgain == "n"):
+                exit()
+            else:
+                print("error: unknown command")
 
     computerChoiceIndex = random.randrange(0,len(choices))
     computerChoice = choices[computerChoiceIndex]
@@ -33,48 +37,50 @@ while(loop == True):
         #user gets a point
         if(computerChoice == "scissors"):
             userScore += 1
-            print("\ncomputer picked " + computerChoice)
+            print("\n*computer picked " + computerChoice + "*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
         #no points given to either
         elif(computerChoice == "rock"):
-            print("\ncomputer picked " + computerChoice + " also, no points given")
+            print("\n*computer picked " + computerChoice + " also, no points given*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
         #computer gets point
         elif(computerChoice == "paper"):
             computerScore += 1
-            print("\ncomputer picked " + computerChoice)
+            print("\n*computer picked " + computerChoice + "*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
     #if user picks paper 
     elif(userChoice == "paper"):
         #user gets a point
         if(computerChoice == "rock"):
             userScore += 1
-            print("\ncomputer picked " + computerChoice)
+            print("\n*computer picked " + computerChoice + "*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
         #no points given to either
         elif(computerChoice == "paper"):
-            print("\ncomputer picked " + computerChoice + " also, no points given")
+            print("\n*computer picked " + computerChoice + " also, no points given*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
         #computer gets point
         elif(computerChoice == "scissors"):
             computerScore += 1
-            print("\ncomputer picked " + computerChoice)
+            print("\n*computer picked " + computerChoice + "*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
     #if user picks scissors 
     elif(userChoice == "scissors"):
         #user gets a point
         if(computerChoice == "paper"):
             userScore += 1
-            print("\ncomputer picked " + computerChoice)
+            print("\n*computer picked " + computerChoice + "*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
         #no points given to either
         elif(computerChoice == "scissors"):
-            print("\ncomputer picked " + computerChoice + " also, no points given")
+            print("\n*computer picked " + computerChoice + " also, no points given*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
         #computer gets point
         elif(computerChoice == "rock"):
             computerScore += 1
-            print("\ncomputer picked " + computerChoice)
+            print("\n*computer picked " + computerChoice + "*")
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
     else:
         print("error: unknown command\n")
+        
+   
