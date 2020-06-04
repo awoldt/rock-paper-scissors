@@ -77,6 +77,4 @@ while(loop == True):
             print("\ncomputer picked " + computerChoice)
             print("user score - " + str(userScore) + "\ncomputer score - " + str(computerScore) + "\n")
     else:
-        print("error: unknown command")
-        
-   
+        print("error: unknown command\n")
